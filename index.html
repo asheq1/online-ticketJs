@@ -11,24 +11,39 @@
 </head>
 <body >
     <header class="">
-        <nav class="flex sticky-top-0 items-center justify-around p-4 bg-blue-500 text-white">
+        <nav class="flex items-center justify-around p-4 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 text-white shadow-lg">
             <h1 class="font-bold text-2xl">P-Ticket</h1>
-            <div class="flex space-x-6">
-                <a href="" class="hover:text-blue-300">Home</a>
-                <a href="" class="hover:text-blue-300">About</a>
-                <a href="" class="hover:text-blue-300">Destination</a>
-                <a href="" class="hover:text-blue-300">Search</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="" class="hover:text-yellow-400">Home</a>
+                <a href="" class="hover:text-yellow-400">About</a>
+                <a href="" class="hover:text-yellow-400">Destination</a>
+                <a href="" class="hover:text-yellow-400">Search</a>
             </div>
-            <div>
-                <button class="flex items-center bg-white text-blue-600 px-4 py-2 rounded-lg hover:bg-gray-200">
-                    Bus
-                    <img src="images/bus-icon.png" alt="" class="ml-2 w-5 h-5">
-                </button>
-                
+            <button class="flex items-center bg-yellow-400 text-gray-800 px-4 py-2 rounded-lg hover:bg-yellow-300 transition duration-300 md:flex">
+                Bus
+                <img src="images/bus-icon.png" alt="" class="ml-2 w-5 h-5">
+            </button>
+        
+            <!-- Hamburger Icon -->
+            <div id="menu-toggle" class="md:hidden flex flex-col justify-center items-center cursor-pointer">
+                <span class="block w-8 h-1 bg-white mb-1"></span>
+                <span class="block w-8 h-1 bg-white mb-1"></span>
+                <span class="block w-8 h-1 bg-white"></span>
             </div>
-            
         </nav>
         
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden flex flex-col items-center bg-blue-600 text-white">
+            <a href="" class="block py-2 hover:text-yellow-400">Home</a>
+            <a href="" class="block py-2 hover:text-yellow-400">About</a>
+            <a href="" class="block py-2 hover:text-yellow-400">Destination</a>
+            <a href="" class="block py-2 hover:text-yellow-400">Search</a>
+        </div>
+        
+        
+        
     </header>
+
+    <script src="script/app.js"></script>
 </body>
 </html>
