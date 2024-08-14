@@ -1,0 +1,4 @@
+1. text write on image
+    relative than children absolute
+2. image onto half card
+    .css .bg-gradient{background}
