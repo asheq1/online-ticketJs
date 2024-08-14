@@ -43,52 +43,125 @@
         </div>
         
         <!-- banner  -->
-        <section class="bg-gradient h-[550px] w-full rounded-3xl md:container lg:mx-auto">
-                <div class=" flex flex-col poppins-extralight  items-center justify-center h-screen pb-20 text-center">
-                    <h2 class=" text-white font-extrabold text-4xl">End-to-end Travel with</h2>
-                    <h2 class="text-4xl font-extrabold text-[#1DD100]">ENa Paribahan</h2>
-                    <p class="text-slate-300 font-bold">Yes, you can run unit tests and view the results directly within the app. <br> The integated testing features allow for a streamlined.</p>
-                    <a href="#buy-ticket" class="btn btn-active bg-[#1DD100] text-white font-bold mt-5 px-12">Buy Tickets</a>
-                </div>                        
+        <section class="bg-gradient h-[550px] w-full rounded-2xl md:h-[600px] lg:h-[650px] md:container lg:mx-auto">
+            <div class="flex flex-col poppins-extralight items-center justify-center h-full text-center px-4 md:px-8">
+                <h2 class="text-white font-extrabold text-3xl md:text-4xl lg:text-5xl">End-to-end Travel with</h2>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#1DD100]">ENa Paribahan</h2>
+                <p class="text-slate-300 font-bold mt-4 md:text-lg lg:text-xl">
+                    Yes, you can run unit tests and view the results directly within the app.<br class="hidden md:block">
+                    The integrated testing features allow for a streamlined process.
+                </p>
+                <a href="#buy-ticket" class="btn btn-active bg-[#1DD100] text-white font-bold mt-5 px-8 md:px-12">
+                    Buy Tickets
+                </a>
+            </div>
+        </section>  
+
+        <!-- Responsive Card Section -->
+        <section class="pb-20 flex flex-col md:flex-row justify-center gap-7 mt-[-50px] md:mt-[-100px] z-10 md:container lg:mx-auto px-4 md:px-0">
+            <!-- card 1 -->
+            <div class="w-full md:w-80 bg-base-100 shadow-xl rounded-3xl border-b-4 border-b-[#1DD100] p-8 md:p-12">
+                <div class="flex gap-5 justify-center">
+                    <div>
+                        <img src="./images/people.png" alt="Registered users" class="w-12 h-12 md:w-16 md:h-16">
+                    </div>
+                    <div>
+                        <h2 class="font-inter text-2xl md:text-3xl font-extrabold">550K+</h2>
+                        <p class="text-center md:text-left">Registered users</p>
+                    </div>
+                </div>
+            </div>
+            <!-- card 2 -->
+            <div class="w-full md:w-80 bg-base-100 shadow-xl rounded-3xl border-b-4 border-b-[#1DD100] p-8 md:p-12">
+                <div class="flex gap-5 justify-center">
+                    <div>
+                        <img src="./images/ticket-cupon.png" alt="Tickets sold" class="w-12 h-12 md:w-16 md:h-16">
+                    </div>
+                    <div>
+                        <h2 class="font-inter text-2xl md:text-3xl font-extrabold">1.7 lacks</h2>
+                        <p class="text-center md:text-left">Tickets sold</p>
+                    </div>
+                </div>
+            </div>
+            <!-- card 3 -->
+            <div class="w-full md:w-80 bg-base-100 shadow-xl rounded-3xl border-b-4 border-b-[#1DD100] p-8 md:p-12">
+                <div class="flex gap-5 justify-center">
+                    <div>
+                        <img src="./images/tabler-icon-bus-stop.png" alt="Rental parents" class="w-12 h-12 md:w-16 md:h-16">
+                    </div>
+                    <div>
+                        <h2 class="font-inter text-2xl md:text-3xl font-extrabold">80K+</h2>
+                        <p class="text-center md:text-left">Rental parents</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <!-- card part  -->   
-        <section class="pb-20 flex justify-center gap-7 mt-[-100px] z-10 md:container lg:mx-auto">
-            <!-- card 1  -->
-            <div class="w-96 bg-base-100 shadow-xl rounded-3xl border-b-4 border-b-[#1DD100] p-12">
-                <div class="flex gap-5 justify-center">
-                    <div>
-                    <img src="./images/people.png" alt="" />
-                    </div>
-                    <div>
-                    <h2 class="font-inter text-3xl font-extrabold">550K+</h2>
-                    <p>Registered users</p>
-                    </div>
-                </div>
-            </div>
-            <div class="w-96 bg-base-100 shadow-xl rounded-3xl border-b-4 border-b-[#1DD100] p-12">
-                <div class="flex gap-5 justify-center">
-                    <div>
-                    <img src="./images/people.png" alt="" />
-                    </div>
-                    <div>
-                    <h2 class="font-inter text-3xl font-extrabold">550K+</h2>
-                    <p>Registered users</p>
-                    </div>
-                </div>
-            </div>
-            <div class="w-96 bg-base-100 shadow-xl rounded-3xl border-b-4 border-b-[#1DD100] p-12">
-                <div class="flex gap-5 justify-center">
-                    <div>
-                    <img src="./images/people.png" alt="" />
-                    </div>
-                    <div>
-                    <h2 class="font-inter text-3xl font-extrabold">550K+</h2>
-                    <p>Registered users</p>
-                    </div>
-                </div>
-            </div>
-        </section> 
     </header>
+
+    <!-- coupon section  -->
+        <section class="md:container lg:mx-auto">
+            <div class="text-center pb-10">
+                <h2 class="font-inter text-3xl font-extrabold text-center">Best offers for you</h2>
+            </div>
+            <div class="flex flex-col md:flex-row gap-10 items-center px-4 md:px-24">
+                <!-- coupon one -->
+                <div class="bg-[#FFBF0F] flex flex-col md:flex-row justify-around w-full rounded-3xl items-center p-4">
+                    <div>
+                        <h2 class="font-inter text-4xl font-extrabold">15% OFF</h2>
+                        <b>on your next purchase</b>
+                        <p>use by January 2025</p>
+                    </div>
+                    <div class="my-4 md:my-0">
+                        <img src="./images/cupon-devider.png" alt="coupon devider" />
+                    </div>
+                    <div class="md:mr-20">
+                        <h2 class="poppins-light text-4xl font-extrabold">NEW15</h2>
+                        <p class="text-center">Coupon Code</p>
+                    </div>
+                </div>
+                <!-- coupon two -->
+                <div class="bg-[#F78C9C] flex flex-col md:flex-row justify-around w-full rounded-3xl items-center p-4">
+                    <div class="md:mr-20">
+                        <h2 class="font-inter text-4xl font-extrabold">20% OFF</h2>
+                        <b>on your next purchase</b>
+                        <p>use by January 2025</p>
+                    </div>
+                    <div class="my-4 md:my-0">
+                        <img src="./images/cupon-devider.png" alt="coupon devider" />
+                    </div>
+                    <div>
+                        <h2 class="poppins-light text-4xl font-extrabold">Couple 20</h2>
+                        <p class="text-center">Coupon Code</p>
+                    </div>
+                </div>
+            </div>
+            <!-- see all -->
+            <div class="text-center mt-10">
+                <button class="btn border-2 border-[#1DD100] bg-[#ffffff] text-[#1DD100] mb-10 poppins-thin text-lg font-bold mb-10">See All Offers</button>
+            </div>
+        </section>
+    
+    <!-- ticket buy section start  -->
+    <main id="buy-ticket" class="rounded-t-3xl border-t-2 border-t-[#1DD100] bg-[#f7f8f8]">
+        <div class="md:container lg:mx-auto">
+            <div class="text-center py-10">
+                <h1 class="font-inter text-3xl font-extrabold">Hanif Paribahan</h1>
+                <p class="text-gray-500 mt-5">Yes, you can run unit tests and view the results directly within the app. The integrated.</p>
+            </div>
+            <!-- info section for ticket start  -->
+            <div class="flex flex-1 justify-between flex-col">
+                <div class="flex justify-between">
+                    <div class="flex gap-3">
+                        <div>
+                            <img src="./images/" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
 
     <script src="script/app.js"></script>
 </body>
