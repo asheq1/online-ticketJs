@@ -141,27 +141,400 @@
             </div>
         </section>
     
-    <!-- ticket buy section start  -->
-    <main id="buy-ticket" class="rounded-t-3xl border-t-2 border-t-[#1DD100] bg-[#f7f8f8]">
+     <!-- ticket buy section start -->
+        <section
+        id="buy-ticket"
+        class="rounded-t-3xl border-t-2 border-t-[#1DD100] bg-[#f7f8f8]"
+    >
         <div class="md:container lg:mx-auto">
-            <div class="text-center py-10">
-                <h1 class="font-inter text-3xl font-extrabold">Hanif Paribahan</h1>
-                <p class="text-gray-500 mt-5">Yes, you can run unit tests and view the results directly within the app. The integrated.</p>
-            </div>
-            <!-- info section for ticket start  -->
+        <div class="text-center py-10">
+            <h1 class="font-inter text-3xl font-extrabold">GoBus Poribahan</h1>
+            <p class="text-gray-500 mt-5">
+            Yes, you can run unit tests and view the results directly within
+            the app. The integrated <br />
+            testing features allow for a streamlined .
+            </p>
+        </div>
+        <!-- info section for  ticket start-->
+        <div
+            class="flex justify-around items-center bg-white px-5 rounded-lg shadow-lg"
+        >
+            <!-- left side info -->
             <div class="flex flex-1 justify-between flex-col">
-                <div class="flex justify-between">
-                    <div class="flex gap-3">
-                        <div>
-                            <img src="./images/" alt="">
-                        </div>
-                    </div>
+            <div class="flex justify-between">
+                <div class="flex gap-3">
+                <div><img src="./images/bus-logo.png" alt="" /></div>
+                <div>
+                    <h2 class="font-inter text-lg font-bold">
+                    GoBus Poribahan
+                    </h2>
+                    <p>Coach-009-WEB ! AC_Business</p>
+                </div>
+                </div>
+                <div>
+                <button
+                    class="btn font-inter bg-[#e8fae5] border-2 border-[#1DD100] text-lg font-bold text-[#1DD100]"
+                >
+                    <img src="./images/seat-green.png" alt="" />
+                    <span id="seat-left">40</span> Seats left
+                </button>
                 </div>
             </div>
+            <!-- table Start-->
+            <div class="grid-cols-1 bg-[#F7F8F8] rounded-lg mt-5">
+                <div class="overflow-x-auto">
+                <table class="table">
+                    <!-- head -->
+                    <thead>
+                    <tr>
+                        <th>Route</th>
+                        <th>Dhaka - Sylhet</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- row 1 -->
+                    <tr>
+                        <td>Departure Time</td>
+                        <td>9:00 PM</td>
+                    </tr>
+                    <!-- row 2 -->
+                    <tr>
+                        <td>
+                        <button class="btn btn-wide mr-3">
+                            Boarding Point - Laxmipur</button
+                        ><button class="btn btn-wide mr-3">
+                            Dropping Point - Bogura</button
+                        ><button class="btn btn-wide">
+                            Boarding Point - Laxmipur
+                        </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            <!-- table End-->
+            </div>
+            <div><img src="./images/info-devider.png" alt="" /></div>
+            <!-- right side info -->
+            <div class="w-96 flex flex-col items-center gap-2">
+            <img src="./images/fare.png" alt="" />
+            <h2 class="font-inter text-3xl font-extrabold">550 Taka</h2>
+            <p class="text-gray-500">Per Seat</p>
+            </div>
         </div>
-    </main>
+        </div>
+        <!-- info section for  ticket end-->
+        </section>
+   <!-- ticket buy section End -->
+    
+    <!-- select your seat for booking star  -->
+        <section class="bg-[#f7f8f8] pt-20">
+            <!-- parents 1  -->
+            <div class="flex justify-between md:container lg:mx-auto bg-white shadow-lg p-8 rounded-lg">
+                <!-- left  -->
+                <div class="flex-1 border-r-2 border-dashed border-[#03071249]">
+                    <h1 class="font-inter text-2xl font-bold pb-4">Select Your Seat</h1>
+                    <!-- seat info  -->
+                    <div class="flex justify-between pr-10 border-y-2 border-dotted border-[#a1a0a044]">
+                        <div class="flex items-center py-2">
+                            <img src="./images/seat-gray.png" class="w-10" alt="">
+                            <h2 class="font-inter text-2xl font-normal text-gray-400">Available</h2>
 
-
+                        </div>    
+                    </div>
+                    <button>
+                        <img src="./images/seat-green-filled.png" alt="" />
+                        Seats Selected
+                    </button>
+                </div>
+            </div>
+            <!-- seat booking button Start  -->
+            <div class="flex flex-row-reverse justify-items-end p-2">
+                <p class="shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter">
+                    <img src="./images/driver.svg" alt="">
+                </p>
+            </div>
+            <!-- A series Start-->
+            <div class="flex justify-between px-2">
+                <div class="flex gap-12 py-5">
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    A1
+                  </button>
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    A2
+                  </button>
+                </div>
+                <div class="flex gap-12 py-5">
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    A3
+                  </button>
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    A4
+                  </button>
+                </div>
+              </div>
+              <!-- A series End-->
+              <!-- B series Start-->
+              <div class="flex justify-between px-2">
+                <div class="flex gap-12 py-5">
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    B1
+                  </button>
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    B2
+                  </button>
+                </div>
+                <div class="flex gap-12 py-5">
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    B3
+                  </button>
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    B4
+                  </button>
+                </div>
+              </div>
+              <!-- B series End-->
+              <!-- C series Start-->
+              <div class="flex justify-between px-2">
+                <div class="flex gap-12 py-5">
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    C1
+                  </button>
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    C2
+                  </button>
+                </div>
+                <div class="flex gap-12 py-5">
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    C3
+                  </button>
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    C4
+                  </button>
+                </div>
+              </div>
+              <!-- C series End-->
+              <!-- D series Start-->
+              <div class="flex justify-between px-2">
+                <div class="flex gap-12 py-5">
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    D1
+                  </button>
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    D2
+                  </button>
+                </div>
+                <div class="flex gap-12 py-5">
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    D3
+                  </button>
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    D4
+                  </button>
+                </div>
+              </div>
+              <!-- D series End-->
+              <!-- E series Start-->
+              <div class="flex justify-between px-2">
+                <div class="flex gap-12 py-5">
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    E1
+                  </button>
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    E2
+                  </button>
+                </div>
+                <div class="flex gap-12 py-5">
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    E3
+                  </button>
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    E4
+                  </button>
+                </div>
+              </div>
+              <!-- F series Start-->
+              <div class="flex justify-between px-2">
+                <div class="flex gap-12 py-5">
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    F1
+                  </button>
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    F2
+                  </button>
+                </div>
+                <div class="flex gap-12 py-5">
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    F3
+                  </button>
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    F4
+                  </button>
+                </div>
+              </div>
+              <!-- F series End-->
+              <!-- G series Start-->
+              <div class="flex justify-between px-2">
+                <div class="flex gap-12 py-5">
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    G1
+                  </button>
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    G2
+                  </button>
+                </div>
+                <div class="flex gap-12 py-5">
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    G3
+                  </button>
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    G4
+                  </button>
+                </div>
+              </div>
+              <!-- G series End-->
+              <!-- H series Start-->
+              <div class="flex justify-between px-2">
+                <div class="flex gap-12 py-5">
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    H1
+                  </button>
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    H2
+                  </button>
+                </div>
+                <div class="flex gap-12 py-5">
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    H3
+                  </button>
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    H4
+                  </button>
+                </div>
+              </div>
+              <!-- H series End-->
+              <!-- I series Start-->
+              <div class="flex justify-between px-2">
+                <div class="flex gap-12 py-5">
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    I1
+                  </button>
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    I2
+                  </button>
+                </div>
+                <div class="flex gap-12 py-5">
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    I3
+                  </button>
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    I4
+                  </button>
+                </div>
+              </div>
+              <!-- I series End-->
+              <!-- J series Start-->
+              <div class="flex justify-between px-2">
+                <div class="flex gap-12 py-5">
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    J1
+                  </button>
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    J2
+                  </button>
+                </div>
+                <div class="flex gap-12 py-5">
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    J3
+                  </button>
+                  <button
+                    class="btn-select shadow-sm bg-[#F7F8F8] px-16 py-6 rounded-lg font-inter"
+                  >
+                    I4
+                  </button>
+                </div>
+              </div>
+              <!-- Jseries End-->
+        </section>
 
     <script src="script/app.js"></script>
 </body>
