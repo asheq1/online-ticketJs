@@ -12,13 +12,27 @@ document.getElementById('menu-toggle').addEventListener('click', function() {
     }
 });
 
-// set green seat 
+
+// booking seat 
 const seats = document.querySelectorAll('.btn-select');
-// seats.classList.add('bg-[#1DD100]');
 seats.forEach((seat) => {
     seat.addEventListener('click', (e)=>{
-        console.log(e.target.innerText)
+        // check if the seat hase already been selected 
+        if(seat.style.backgroundColor === 'rgb(29, 209, 0)'){
+            return;
+        }
+
+        // set green seat 
         seat.style.backgroundColor = '#1DD100';
-        seat.style.color = 'white'
+        seat.style.color = 'white';
+        
+        // per seat 
+        let seatLevel = e.target.innerText;
+        
+        //update seat count
+        let seatCount = getElementId('seat-count');
+        let perSeat =  seatCount + 1;
+        setElementId('seat-count', perSeat);
+
     })
 })
