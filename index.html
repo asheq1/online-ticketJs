@@ -570,7 +570,9 @@
                   </tr>
                 </thead>
                 <!-- for dom Elements dynamics -->
-                <tbody id="selected-container"></tbody>
+                <tbody id="selected-container">
+
+                </tbody>
               </table>
               <!-- total calculate -->
               <div
@@ -579,6 +581,15 @@
                 <p class="text-xl font-semibold">Total Price</p>
                 <p class="text-xl font-semibold">
                   BDT <span id="total-ticket-price">0</span>
+                </p>
+              </div>
+              <!-- Discount price  -->
+              <div
+                class="flex justify-around mt-3 border-t-2"
+              >
+                <p class="text-xl font-semibold">Discount</p>
+                <p class="text-xl font-semibold">
+                  BDT <span id="discount-price">0</span>
                 </p>
               </div>
 
@@ -590,9 +601,9 @@
                   id="coupon-code"
                   class="input input-bordered w-full"
                 /><button
-                  onclick="grandTotalPrice('apply-btn')"
-                  class="btn text-white bg-[#1DD100]"
-                >
+                    id="apply-now"
+                    class="btn text-white bg-[#1DD100]"
+                  disabled> 
                   Appy Now
                 </button>
               </div>
