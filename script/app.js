@@ -11,3 +11,14 @@ document.getElementById('menu-toggle').addEventListener('click', function() {
         this.innerHTML = '<span class="block w-8 h-1 bg-slate-800 mb-1"></span><span class="block w-8 h-1 bg-slate-800 mb-1"></span><span class="block w-8 h-1 bg-slate-800"></span>';
     }
 });
+
+// set green seat 
+const seats = document.querySelectorAll('.btn-select');
+// seats.classList.add('bg-[#1DD100]');
+seats.forEach((seat) => {
+    seat.addEventListener('click', (e)=>{
+        console.log(e.target.innerText)
+        seat.style.backgroundColor = '#1DD100';
+        seat.style.color = 'white'
+    })
+})

@@ -27,5 +27,7 @@
     background-repeat: no-repeat;
 }
 
-
-
+/* selected seat  */
+.selected-seat{
+  background-color: #1DD100;
+}
