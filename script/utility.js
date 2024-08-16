@@ -21,3 +21,7 @@ function updateSeatCount() {
     setElementId('seat-count', perSeat);
     return true; // Return true to indicate the seat count was successfully updated
 }
+
+// form validation 
+
+

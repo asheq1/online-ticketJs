@@ -83,3 +83,17 @@ seats.forEach((seat) => {
         });
     });
 });
+
+
+// form validation 
+
+
+// Get the current date
+const currentDate = new Date().toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+});
+
+// Set the date in the modal
+document.getElementById('booking-date').innerText = currentDate;
