@@ -44,7 +44,7 @@ seats.forEach((seat) => {
         const container = document.getElementById('selected-container');
         const newRow = document.createElement('tr');
         newRow.innerHTML = `
-                <td>${seatLevel}</td>
+                <td class="seat-level">${seatLevel}</td>
                 <td>Economy</td>
                 <td>${ticketPrice}</td>
         `;
@@ -85,15 +85,39 @@ seats.forEach((seat) => {
 });
 
 
-// form validation 
+// form update 
+document.getElementById('next-button').addEventListener('click', function(e){
+    e.preventDefault();
 
+    const name = document.getElementById('passenger-name').value.trim();
+    const phoneNumber = document.getElementById('contact-number').value.trim();
+    const email = document.getElementById('email').value.trim();
 
-// Get the current date
-const currentDate = new Date().toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
+    // Validate form fields
+    if(!name || !phoneNumber || !email){
+        alert('Please fill out all fields');
+        return;
+    }
+
+    // Update modal content with form data
+    const modalContent = document.getElementById('modal-details');
+    modalContent.innerHTML = `
+        <p><strong>Passenger Name:</strong> ${name}</p>
+        <p><strong>Contact:</strong> ${phoneNumber}</p>
+        <p><strong>Email:</strong> ${email}</p>
+    `;
+
+    // Clear the form fields after updating the modal content
+    document.getElementById('passenger-name').value = '';
+    document.getElementById('contact-number').value = '';
+    document.getElementById('email').value = '';
+
+    // Show the modal
+    document.getElementById('my_modal_4').showModal();
+
+    // Now call updateModalContent() if you need to update additional content
+    updateModalContent();
 });
 
-// Set the date in the modal
-document.getElementById('booking-date').innerText = currentDate;
+
+

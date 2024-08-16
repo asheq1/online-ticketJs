@@ -22,6 +22,30 @@ function updateSeatCount() {
     return true; // Return true to indicate the seat count was successfully updated
 }
 
-// form validation 
+// Get the current date
+const currentDate = new Date().toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+});
 
+// Set the date in the modal
+document.getElementById('booking-date').innerText = currentDate;
 
+// update modal content
+function updateModalContent(){
+    const seatLevels = document.querySelectorAll('.seat-level');
+    const totalCost = document.getElementById('total-ticket-price').innerText.trim();
+  
+    let seatDetails = `<h3 class="font-semibold text-xl text-[#4A4A4A]">Seat Details:</h3><ul>`;
+    seatLevels.forEach(seat => {
+        seatDetails += `<li>${seat.innerText}</li>`;
+    });
+    seatDetails += `</ul>`;
+
+    const modalDetails = document.getElementById('modal-details');
+    modalDetails.innerHTML = `
+        ${seatDetails}
+        <p class="font-semibold text-xl text-[#4A4A4A]">Grand Total: $${totalCost}</P>
+    `;
+}
