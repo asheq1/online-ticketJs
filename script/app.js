@@ -1,4 +1,4 @@
-// mobile navbar toggle
+// Mobile navbar toggle
 document.getElementById('menu-toggle').addEventListener('click', function() {
     var menu = document.getElementById('mobile-menu');
     menu.classList.toggle('hidden');
@@ -12,39 +12,35 @@ document.getElementById('menu-toggle').addEventListener('click', function() {
     }
 });
 
-
-// booking seat 
+// Booking seat 
 const seats = document.querySelectorAll('.btn-select');
 seats.forEach((seat) => {
-    seat.addEventListener('click', (e)=>{
-        // check if the seat hase already been selected 
-        if(seat.style.backgroundColor === 'rgb(29, 209, 0)'){
+    seat.addEventListener('click', (e) => {
+        // Check if the seat has already been selected
+        if (seat.style.backgroundColor === 'rgb(29, 209, 0)') {
             return;
         }
 
-        // set green seat 
-        seat.style.backgroundColor = '#1DD100';
-        seat.style.color = 'white';
-        
-        // per seat 
-        let seatLevel = e.target.innerText;
-        
-        //update seat count
-        let seatCount = getElementId('seat-count');
-        let perSeat =  seatCount + 1;
-        setElementId('seat-count', perSeat);
-        if(seatCount > 3){
-            // alert('No more ticket')
-            return 
+        // Update seat count and check if the limit has been reached
+        const seatUpdated = updateSeatCount();
+        if (!seatUpdated) {
+            return; // Exit if seat count limit is reached
         }
 
-        // left seat
+        // Set green seat 
+        seat.style.backgroundColor = '#1DD100';
+        seat.style.color = 'white';
+
+        // Get seat level 
+        let seatLevel = e.target.innerText;
+
+        // Update the left seat count
         let leftSeat = getElementId('seat-left');
         let leftCount = leftSeat - 1;
         setElementId('seat-left', leftCount);
-        
+
         let ticketPrice = 550;
-        // seat, class, price
+        // Update the table with selected seat details
         const container = document.getElementById('selected-container');
         const newRow = document.createElement('tr');
         newRow.innerHTML = `
@@ -54,42 +50,36 @@ seats.forEach((seat) => {
         `;
         container.appendChild(newRow);
 
-        // total ticket price 
-        let totalPrice = perSeat * ticketPrice;
+        // Update total ticket price 
+        let totalPrice = getElementId('seat-count') * ticketPrice;
         setElementId('total-ticket-price', totalPrice);
 
-        // Get the input field and apply button elements
+        // Handle coupon code
         const couponCode = document.getElementById('coupon-code');
         const applyButton = document.getElementById('apply-now');
 
-        // coupon code 
-        couponCode.addEventListener('keyup', ()=>{
+        // Enable the apply button if the correct coupon code is entered
+        couponCode.addEventListener('keyup', () => {
             const inputValue = couponCode.value;
-            if(inputValue === 'NEW15'){
-                applyButton.removeAttribute('disabled')
-            } 
-            // else {
-            //     applyButton.removeAttribute('disabled', true)
-            // }
-        })
-        // coupon discuont 
+            if (inputValue === 'NEW15') {
+                applyButton.removeAttribute('disabled');
+            }
+        });
+
+        // Apply coupon discount 
         applyButton.addEventListener('click', () => {
             const inputValue = couponCode.value;
 
-            if(inputValue === 'NEW15'){
+            if (inputValue === 'NEW15') {
                 const discount15 = totalPrice * 0.15;
-                setElementId('discount-price', discount15)
-                couponCode.value =''
+                setElementId('discount-price', discount15);
+                couponCode.value = '';
+
+                // Update grand total
+                const grand_price = getElementId('total-ticket-price');
+                const grand_total = grand_price - discount15;
+                setElementId('grand-total', grand_total)
             }
-        })
-
-        // grand total
-        const grand_Field = getElementId('grand-total');
-        const grand_Price = getElementId('total-ticket-price');
-        const discount = getElementId('discount-price');
-        const grand_total = grand_Price + grand_Field;
-        const all_total = grand_total + discount;
-        setElementId('grand-total', all_total)
-
-    })
-})
+        });
+    });
+});
